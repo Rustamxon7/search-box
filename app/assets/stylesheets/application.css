@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.article {
+  padding: 12px;
+}
+
+.article p a {
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+}
