@@ -1,0 +1,12 @@
+<% if arguments %>
+  <ul>
+    <% arguments.each do |argument| %>
+      <% if Article.find_by(title: argument.title) %>
+        <% article = Article.find_by(title: argument.title) %>
+        <li><%= link_to article.title, article_path(article) %></li>
+      <% else %>
+        <li><%= argument.title %></li>
+      <% end %>
+    <% end %>
+  </ul>
+<% end%>

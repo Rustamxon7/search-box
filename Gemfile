@@ -70,3 +70,5 @@ gem "devise", "~> 4.9"
 gem "rspec", "~> 3.12"
 
 gem "faker", "~> 3.2"
+
+gem "ruby-spellchecker", "~> 0.1.5"

@@ -1,0 +1,23 @@
+<%# table: argument:title, argument:search_count, argument:score %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Search Count</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+
+  <tbody data-controller="arguments" id="arguments-table">
+    <% @arguments.each do |argument| %>
+      <tr>
+        <td><%= argument.title %></td>
+        <td><%= argument.search_count %></td>
+        <td><%= argument.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= turbo_stream_from "quotes" %>

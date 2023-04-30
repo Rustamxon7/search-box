@@ -1,0 +1,9 @@
+<% if arguments.any? %>
+  <% arguments.each do |argument| %>
+    <tr>
+      <td><%= argument.title %></td>
+      <td><%= argument.search_count %></td>
+      <td><%= argument.score %></td>
+    </tr>
+  <% end %>
+<% end %>

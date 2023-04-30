@@ -1,12 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
+
 <h1>Articles</h1>
 
 <div class="search">
-  <%= form_with(url: articles_path, method: :get, data: {
-    turbo_frame: "articles", turbo_action: "advance"}) do |form| %>
-    <%= form.text_field :query, placeholder: "Search articles" %>
+  <%= form_with(url: articles_path, method: :get, 
+  data: {
+    action: "keyup->search#arguments",
+    controller: "search",
+    suggesttions_url: suggestions_path,
+    }, 
+    id: "search-form"
+    
+    ) do |form| %>
+    <%= form.text_field :query, placeholder: "Search articles", data: {
+      search_target: "query",
+      action: "blur->search#hideArguments"}, autocomplete: :off, id: current_user.id, class: "search-input" %>
+
     <%= form.submit "Search" %>
+
+    <div id="arguments" data-search-target="arguments" data-action="mousedown->search#childClicked">
+      <%= render partial: "articles/arguments", locals: { arguments: @arguments } %>
+    </div>
   <% end %>
 </div>
 

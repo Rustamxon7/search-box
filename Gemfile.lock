@@ -178,6 +178,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.0)
+    ruby-spellchecker (0.1.5)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -222,6 +223,7 @@ DEPENDENCIES
   rails (~> 7.0.4, >= 7.0.4.3)
   redis (~> 4.0)
   rspec (~> 3.12)
+  ruby-spellchecker (~> 0.1.5)
   sprockets-rails
   stimulus-rails
   turbo-rails
