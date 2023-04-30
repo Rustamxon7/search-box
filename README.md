@@ -1,24 +1,62 @@
-# README
+# Search box with analitics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This is a simple articles website with search box. But each search request is saved in database and can be used for analitics. Data is will be saved in real time. 
 
-* Ruby version
+## Installation
 
-* System dependencies
+1. Clone this repository
 
-* Configuration
+```bash
+git clone
+```
 
-* Database creation
+2. Install requirements
 
-* Database initialization
+```bash
+bundle install 
 
-* How to run the test suite
+yarn install 
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Create database
 
-* Deployment instructions
+```bash
+rails db:create 🗄
+```
 
-* ...
+4. Run migrations
+
+```bash
+rails db:migrate 🚀
+```
+
+5. Run seeds
+
+```bash
+rails db:seed 🌱
+```
+
+6. Run redis server
+
+```bash
+redis-server
+```
+
+7. Run server
+
+```bash
+bin/dev 🚀
+```
+
+## Usage
+
+1. Open your browser and go to http://localhost:3000
+2. Type what you want to search in search box
+3. Click on search button
+4. Go to http://localhost:3000/arguments to see all search requests
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
