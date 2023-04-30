@@ -57,6 +57,11 @@ bin/dev 🚀
 3. Click on search button
 4. Go to http://localhost:3000/arguments to see all search requests
 
+<!-- hint -->
+> To see real time analitics open the same /arguments page as a guest user in incognito mode and 
+see how the page is updated in real time
+<!-- endhint -->
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
